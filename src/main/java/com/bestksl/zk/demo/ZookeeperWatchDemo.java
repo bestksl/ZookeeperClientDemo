@@ -32,8 +32,6 @@ public class ZookeeperWatchDemo {
                     }
                 }
             }
-
-
         });
     }
 
@@ -42,5 +40,10 @@ public class ZookeeperWatchDemo {
         byte[] data = zk.getData("/idea", true, null);
         Thread.sleep(Long.MAX_VALUE);
 
+    }
+
+    @Test
+    public void clean() throws InterruptedException {
+        zk.close();
     }
 }
