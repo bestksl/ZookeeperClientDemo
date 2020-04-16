@@ -1,5 +1,6 @@
 package com.bestksl.zk.demo;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+@Slf4j
 public class ZookeeperClientDemo {
     private ZooKeeper zk;
 
