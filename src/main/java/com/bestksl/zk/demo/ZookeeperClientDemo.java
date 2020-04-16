@@ -13,13 +13,14 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-@Slf4j
+
+
 public class ZookeeperClientDemo {
     private ZooKeeper zk;
 
     @Before
     public void init() throws IOException, KeeperException, InterruptedException {
-        zk = new ZooKeeper("HDP-01:2181,HDP-02:2181,HDP-03:2181", 2000, null);
+        zk = new ZooKeeper("zk01:2181,zk02:2181,zk03:2181", 3000, null);
     }
 
     @Test
